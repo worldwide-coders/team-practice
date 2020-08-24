@@ -37,6 +37,15 @@ export const signOut = user => {
     }
   })
 }
+export const signOut2 = user => {
+  return axios({
+    url: apiUrl + '/sign-out2',
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Token token=${user.token}`
+    }
+  })
+}
 
 export const changePassword = (passwords, user) => {
   return axios({
