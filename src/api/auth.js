@@ -1,6 +1,8 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
+//  Adam has added a comment
+
 export const signUp = credentials => {
   return axios({
     method: 'POST',
@@ -31,6 +33,15 @@ export const signIn = credentials => {
 export const signOut = user => {
   return axios({
     url: apiUrl + '/sign-out',
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Token token=${user.token}`
+    }
+  })
+}
+export const signOut2 = user => {
+  return axios({
+    url: apiUrl + '/sign-out2',
     method: 'DELETE',
     headers: {
       'Authorization': `Token token=${user.token}`
