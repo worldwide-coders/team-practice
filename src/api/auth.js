@@ -1,6 +1,8 @@
 import apiUrl from '../apiConfig'
 import axios from 'axios'
 
+//  Adam has added a comment
+
 export const signUp = credentials => {
   return axios({
     method: 'POST',
